@@ -1,83 +1,83 @@
 * {
-    box-sizing: border-box
-}
+    box-sizing: border-box                                     /* Para todo o html aplicado o box-sizing:border-box para afetar todos os elementos e fugir do padrão do css. */
+}                                                               /*Ele faz com que a altura e largura dos elementos incluam o padding e borda */
 
-.slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
+.slideshow-container {                                       
+    max-width: 1000px;                                         /* Uma max-width de 1000px para os elementos dentro dele (container) não ultrapassar   */
+    position: relative;                                        /*Position relative para entrar com elemento absolute nele */
+    margin: auto;                                              /*margin auto para centralizar o conteiner no centro da página horizontamente */
 }
 
 .mySlides {
-    display: none;
+    display: none;                                             /*ocultar completamente um elemento da página web*/
 }
 
 .anterior,
 .proximo {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
+    cursor: pointer;                                         /* O cursor pointer para mostrar que na seta pode clicar e seguir para o proximo*/
+    position: absolute;                                       /* o position absolute que vai ser usado no relative do container */
+    top: 50%;                                                 /*É comum usar top: 50%; em animações e transições CSS para criar efeitos de entrada ou movimento suave de elementos na tela.*/
+    width: auto;                                              /*faz com que a borda superior do elemento(ant e prox) esteja posicionada a 50% da altura do container*/
+    margin-top: -22px;                                        /*width auto para ter um calculo automático e encaixar sua largura na do container*/
+    padding: 16px;                                            /*Uma margin e um paddin para dar uma afastada da borda do container*/
     color: white;
-    font-weight: bold;
+    font-weight: bold;                                        /*Ele representa uma fonte mais escura ou mais grossa do que a versão padrão da fonte.*/
     font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+    transition: 0.6s ease;                                    /* A transição nesse segundo para não ser algo instatâneo ao clicar*/
+    border-radius: 0 3px 3px 0;                               /* Uma borda mais arredondada nas setas de anterior e próximo*/
+    user-select: none;                                       /* esse user-select:none pana não deixar os botões serem selecionados pelo mouse*/
 }
 
 .proximo {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+    right: 0;                                                 /* A seta de proximo para a direita longe da anterior     */
+    border-radius: 3px 0 0 3px;                               
 }
 
 .anterior:hover,
 .proximo:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);                  /* Quando o mouse chega perto muda para essa cor         */
 }
 
 .text {
-    color: #f2f2f2;
+    color: #f2f2f2;                                      /*O estilo do texto do slide na cor branca, a font 15 px, o padding pra dar uma afastada e não ficar muito colado na borda*/
     font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
+    padding: 8px 12px;                                      /* A position absolute para encaixar no container com o bottom com 8px para entrar na imagem(container) */
+    position: absolute;                            
     bottom: 8px;
-    width: 100%;
+    width: 100%;                                             /*100% para ocupar todo o espaço da linha e poder centralizar no centro com text-align*/
     text-align: center;
 }
 
 .numbertext {
-    color: #f2f2f2;
+    color: #f2f2f2;                               /*O numero da imagem no mesmo tom do texto, o tamanho da fonte 12 px, um padding da esquerda e do top para descolar da borda do container*/
     font-size: 12px;
     padding: 8px 12px;
-    position: absolute;
+    position: absolute;                            /* O absolute para colocar no relative do container e top 0 para ficar no topo*/
     top: 0;
 }
 
 .ponto {
-    cursor: pointer;
-    height: 15px;
+    cursor: pointer;                              /* os pontos na página que também podem passar as imagens e possui cursor pointer para mostrar que é clicável*/
+    height: 15px;                                 /*Uma altura e e largura para dar forma à eles*/
     width: 15px;
-    margin: 0 2px;
+    margin: 0 2px;                                /* pequena margin da esquerda e topo para dar uma afastada ente eles */
     background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+    border-radius: 50%;                          /* border radius para arredonda-los*/
+    display: inline-block;                       /*Display inline-block pra ocupar todo seu espaço em linha*/
+    transition: background-color 0.6s ease;     /* A transição sendo em 0.6s e com uma passagem natural e suave com o ease*/
 }
 
 .active,
 .ponto:hover {
-    background-color: #717171;
+    background-color: #717171;                /*Uma cor diferente ao selecionar o ponto*/
 }
 
 .fade {
-    animation-name: fade;
+    animation-name: fade;            /*Aqui deu o nome da animaçao para a passagem das imagens e a duração para se usar o keyframes  */
     animation-duration: 2.5s;
 }
 
-@keyframes fade {
+@keyframes fade {                     /* o keyframes chama o nome da animação e detalha como vai ser o inicio da passagem (fica mais visivel)e o fim (um pouco menos) */
     from {
         opacity: .2
     }
