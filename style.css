@@ -19,7 +19,7 @@
     top: 50%;                                                 /*É comum usar top: 50%; em animações e transições CSS para criar efeitos de entrada ou movimento suave de elementos na tela.*/
     width: auto;                                              /*faz com que a borda superior do elemento(ant e prox) esteja posicionada a 50% da altura do container*/
     margin-top: -22px;                                        /*width auto para ter um calculo automático e encaixar sua largura na do container*/
-    padding: 16px;                                            /*Uma margin e um paddin para dar uma afastada da borda do container*/
+    padding: 16px;                                            /*Uma margin e um padding para dar uma afastada da borda do container*/
     color: white;
     font-weight: bold;                                        /*Ele representa uma fonte mais escura ou mais grossa do que a versão padrão da fonte.*/
     font-size: 18px;
